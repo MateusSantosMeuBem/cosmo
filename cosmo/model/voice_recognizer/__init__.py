@@ -49,5 +49,5 @@ class VoiceRecognizer:
             if self.recognizer.AcceptWaveform(data):
                 text_data: str = json.loads(self.recognizer.Result())['text'].lower()
                 if text_data in commands['bot_name']:
-                    print('Olá! Eu sou a Judite, sua bibliotecaria pessoal!')
+                    print('Olá! Eu sou o Cosmo, sua bibliotecaria pessoal!')
                 print(text_data)
