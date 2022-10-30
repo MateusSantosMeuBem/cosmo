@@ -3,10 +3,15 @@
 # ---------- Built-in packages ----------
 
 # ---------- Personal packages ----------
-from util.dataframe import (
-    search_items
+from model.voice_recognizer import (
+    VoiceRecognizer
 )
-from util.file_imports.table_data import (
-    table_data
+from util.path import (
+    voice_models
 )
 
+voice_recognizer = VoiceRecognizer(
+    model=voice_models,
+    language='pt-br'
+)
+voice_recognizer.listening()
