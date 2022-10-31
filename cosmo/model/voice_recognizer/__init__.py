@@ -59,7 +59,7 @@ class VoiceRecognizer:
                 text_data: str = json.loads(self.recognizer.Result())['text'].lower()
                 print(f'->[VOCÊ] {text_data}')
                 # CALL BOT
-                if text_data in commands['bot_name']:
+                if text_data in commands['caller']['bot_name']:
                     print(f'[{self.BOT_NAME}] Escutando...')
                     # [STORE START DATE1]
                     start_time_01: float = time.time()
@@ -76,10 +76,10 @@ class VoiceRecognizer:
                             text_data: str = json.loads(self.recognizer.Result())['text'].lower()
                             print(f'->[VOCÊ] {text_data}')
 
-                            for command, aliases in commands.items():
+                            for command, aliases in commands['search'].items():
                                 found_command = False
 
-                                if text_data in aliases and command != 'bot_name':
+                                if text_data in aliases:
                                     print(f'[{self.BOT_NAME}] Qual {command}?')
                                     found_command = True
 
