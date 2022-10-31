@@ -1,7 +1,13 @@
 commands: dict[str, list[str]] = {
     'bot_name': [
         'cosmo',
-        'cosmos'
+        ' '.join(['cosmo' for _ in range(2)]),
+        ' '.join(['cosmo' for _ in range(3)]),
+        ' '.join(['cosmo' for _ in range(4)]),
+        'cosmos',
+        ' '.join(['cosmos' for _ in range(2)]),
+        ' '.join(['cosmos' for _ in range(3)]),
+        ' '.join(['cosmos' for _ in range(4)]),
     ],
     'nome' : [
         'livro',

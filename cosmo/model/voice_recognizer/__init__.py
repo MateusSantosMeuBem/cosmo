@@ -67,7 +67,7 @@ class VoiceRecognizer:
                         
                         data: bytes = self.stream.read(4096)
                         # WAITS 7s AFTER BOT BE CALLED
-                        if time.time() - start_time_01 >= 7:
+                        if time.time() - start_time_01 >= 10:
                             print(f'[{self.BOT_NAME}] Vou ficar aqui esperando você me chamar.')
                             break
 
@@ -113,3 +113,5 @@ class VoiceRecognizer:
 
 
                                     break
+                                elif text_data in ['fechar', 'sair', 'desligar']:
+                                    exit(f'[{self.BOT_NAME}] Até a próxima!')
