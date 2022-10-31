@@ -57,7 +57,7 @@ class VoiceRecognizer:
             data: bytes = self.stream.read(4096)
             if self.recognizer.AcceptWaveform(data):
                 text_data: str = json.loads(self.recognizer.Result())['text'].lower()
-                print(f'->[VOCÊ] {text_data}')
+                if text_data != '': print(f'->[VOCÊ] {text_data}')
                 # CALL BOT
                 if text_data in commands['caller']['bot_name']:
                     print(f'[{self.BOT_NAME}] Escutando...')
