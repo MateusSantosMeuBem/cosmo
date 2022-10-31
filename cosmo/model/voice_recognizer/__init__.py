@@ -38,14 +38,14 @@ class VoiceRecognizer:
         SetLogLevel(-1)
         self.recognizer: KaldiRecognizer = KaldiRecognizer(
             Model(model[language]),
-            16000
+            32000
         )
 
         self.capture: PyAudio = pyaudio.PyAudio()
         self.stream: Stream = self.capture.open(
             format=pyaudio.paInt16,
             channels=1,
-            rate=16000,
+            rate=32000,
             input=True,
             frames_per_buffer=8192
         )
