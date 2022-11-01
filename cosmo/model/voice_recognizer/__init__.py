@@ -67,7 +67,7 @@ class VoiceRecognizer:
                     while not found_command:
                         
                         data: bytes = self.stream.read(4096)
-                        # WAITS 7s AFTER BOT BE CALLED
+                        # WAIT 7s AFTER BOT BE CALLED
                         if time.time() - start_time_01 >= 10:
                             print(f'[{self.BOT_NAME}] Vou ficar aqui esperando você me chamar.')
                             break
